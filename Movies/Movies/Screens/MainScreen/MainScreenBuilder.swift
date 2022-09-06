@@ -9,7 +9,8 @@ import UIKit
 
 final class MainScreenBuilder {
     static func make() -> UINavigationController {
-        let viewController = BaseScreenViewController(nibName: BaseScreenViewController.className, bundle: nil)
+        let viewController = MainScreenViewController(nibName: MainScreenViewController.className, bundle: nil)
+        viewController.viewModel = MainScreenViewModel()
         let navigationController = UINavigationController(rootViewController: viewController)
         return navigationController
     }

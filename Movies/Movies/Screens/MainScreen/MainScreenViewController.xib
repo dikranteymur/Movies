@@ -8,19 +8,73 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainScreenViewController" customModule="Movies" customModuleProvider="target">
+            <connections>
+                <outlet property="bannerView" destination="hya-0h-9gS" id="phQ-Hg-Zc8"/>
+                <outlet property="moviesTableView" destination="MDr-wg-eaC" id="K60-Dn-GVD"/>
+                <outlet property="view" destination="3ob-Ur-s18" id="lG1-Au-oPP"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="3ob-Ur-s18">
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3ob-Ur-s18">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <viewLayoutGuide key="safeArea" id="ZfH-J3-hth"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="RfQ-3R-gRO">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DmU-0z-RJp" userLabel="Content View">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="2000"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hya-0h-9gS">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="256"/>
+                                    <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                </view>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="MDr-wg-eaC">
+                                    <rect key="frame" x="0.0" y="256" width="414" height="1744"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </tableView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="MDr-wg-eaC" firstAttribute="leading" secondItem="DmU-0z-RJp" secondAttribute="leading" id="443-lh-gJy"/>
+                                <constraint firstAttribute="height" constant="2000" id="4Hz-sI-lD2"/>
+                                <constraint firstItem="hya-0h-9gS" firstAttribute="top" secondItem="DmU-0z-RJp" secondAttribute="top" id="5QH-HJ-Qf0"/>
+                                <constraint firstAttribute="trailing" secondItem="hya-0h-9gS" secondAttribute="trailing" id="FIz-Fj-bFy"/>
+                                <constraint firstAttribute="trailing" secondItem="MDr-wg-eaC" secondAttribute="trailing" id="P7a-Qo-SQG"/>
+                                <constraint firstItem="hya-0h-9gS" firstAttribute="leading" secondItem="DmU-0z-RJp" secondAttribute="leading" id="UfF-IT-BcG"/>
+                                <constraint firstItem="MDr-wg-eaC" firstAttribute="top" secondItem="hya-0h-9gS" secondAttribute="bottom" id="hHm-Tk-qrs"/>
+                                <constraint firstAttribute="bottom" secondItem="MDr-wg-eaC" secondAttribute="bottom" id="lmy-5K-FH8"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="DmU-0z-RJp" secondAttribute="bottom" id="7MI-2q-K2F"/>
+                        <constraint firstAttribute="trailing" secondItem="DmU-0z-RJp" secondAttribute="trailing" id="CVE-te-4pL"/>
+                        <constraint firstItem="DmU-0z-RJp" firstAttribute="top" secondItem="RfQ-3R-gRO" secondAttribute="top" id="afc-hS-8pQ"/>
+                        <constraint firstItem="DmU-0z-RJp" firstAttribute="leading" secondItem="RfQ-3R-gRO" secondAttribute="leading" id="rWH-dj-Oa3"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="XhW-I2-nA3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <point key="canvasLocation" x="-83" y="102"/>
+            <constraints>
+                <constraint firstItem="RfQ-3R-gRO" firstAttribute="top" secondItem="3ob-Ur-s18" secondAttribute="top" id="Iqc-Fq-TSf"/>
+                <constraint firstItem="DmU-0z-RJp" firstAttribute="width" secondItem="3ob-Ur-s18" secondAttribute="width" id="JCs-4L-dat"/>
+                <constraint firstItem="hya-0h-9gS" firstAttribute="height" secondItem="3ob-Ur-s18" secondAttribute="height" multiplier="0.285714" id="Ogp-Ww-J8X"/>
+                <constraint firstItem="RfQ-3R-gRO" firstAttribute="trailing" secondItem="3ob-Ur-s18" secondAttribute="trailing" id="ZOl-yf-SjZ"/>
+                <constraint firstAttribute="bottom" secondItem="RfQ-3R-gRO" secondAttribute="bottom" id="bca-32-08o"/>
+                <constraint firstItem="RfQ-3R-gRO" firstAttribute="leading" secondItem="3ob-Ur-s18" secondAttribute="leading" id="eXr-1K-ieK"/>
+            </constraints>
+            <point key="canvasLocation" x="-84.057971014492765" y="101.78571428571428"/>
         </view>
     </objects>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
