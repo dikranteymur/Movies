@@ -19,4 +19,11 @@ final class AppRouter {
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
     }
+
+    func detailView() {
+        let viewController = DetailScreenBuilder.make()
+        let nav = UINavigationController(rootViewController: viewController)
+        window.rootViewController = nav
+        window.makeKeyAndVisible()
+    }
 }

@@ -3,22 +3,124 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailScreenViewController" customModule="Movies" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailScreenViewController" customModule="Movies" customModuleProvider="target">
+            <connections>
+                <outlet property="customRateView" destination="1Ck-cg-sX0" id="rFb-JB-OIV"/>
+                <outlet property="descriptionLabel" destination="Jc5-7j-rEF" id="1WV-HM-7DK"/>
+                <outlet property="movieCustomImageView" destination="fEd-6S-3No" id="q4l-G9-gCy"/>
+                <outlet property="titleLabel" destination="wWH-AY-dXM" id="vup-XD-ePK"/>
+                <outlet property="view" destination="cnn-WH-z0c" id="c7z-kD-rpy"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="or2-Dh-Ugp">
+        <view contentMode="scaleToFill" id="cnn-WH-z0c">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <viewLayoutGuide key="safeArea" id="e4X-mJ-CK8"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="We7-18-cMr">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h1Y-DS-lSi">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Moonrise Kingdom" translatesAutoresizingMaskIntoConstraints="NO" id="fEd-6S-3No" customClass="CustomImageView" customModule="Movies" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="52" width="414" height="256"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="256" id="E1G-1U-QmZ"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="grFirstColor">
+                                            <color key="value" name="White"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="grLastColor">
+                                            <color key="value" red="0.16862745098039217" green="0.16862745098039217" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="alphaValue">
+                                            <real key="value" value="40"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusValue">
+                                            <real key="value" value="0.0"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="linearGradient">
+                                            <real key="value" value="117"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="makeOval" value="NO"/>
+                                    </userDefinedRuntimeAttributes>
+                                </imageView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Ck-cg-sX0" customClass="CustomRateView" customModule="Movies" customModuleProvider="target">
+                                    <rect key="frame" x="16" y="324" width="382" height="24"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="24" id="kiB-rH-zwe"/>
+                                    </constraints>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wWH-AY-dXM">
+                                    <rect key="frame" x="16" y="364" width="382" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jc5-7j-rEF">
+                                    <rect key="frame" x="16" y="401" width="382" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="1Ck-cg-sX0" firstAttribute="leading" secondItem="h1Y-DS-lSi" secondAttribute="leading" constant="16" id="0Ss-3Y-X5e"/>
+                                <constraint firstItem="fEd-6S-3No" firstAttribute="leading" secondItem="h1Y-DS-lSi" secondAttribute="leading" id="187-Yl-3Xs"/>
+                                <constraint firstAttribute="trailing" secondItem="Jc5-7j-rEF" secondAttribute="trailing" constant="16" id="6GS-aB-ZEt"/>
+                                <constraint firstItem="wWH-AY-dXM" firstAttribute="top" secondItem="1Ck-cg-sX0" secondAttribute="bottom" constant="16" id="Api-bc-kwJ"/>
+                                <constraint firstAttribute="trailing" secondItem="fEd-6S-3No" secondAttribute="trailing" id="Le7-AA-Gld"/>
+                                <constraint firstItem="Jc5-7j-rEF" firstAttribute="leading" secondItem="h1Y-DS-lSi" secondAttribute="leading" constant="16" id="Siw-2W-HYP"/>
+                                <constraint firstAttribute="trailing" secondItem="wWH-AY-dXM" secondAttribute="trailing" constant="16" id="YCq-MU-wJ9"/>
+                                <constraint firstItem="Jc5-7j-rEF" firstAttribute="top" secondItem="wWH-AY-dXM" secondAttribute="bottom" constant="16" id="auj-OI-vYJ"/>
+                                <constraint firstItem="wWH-AY-dXM" firstAttribute="leading" secondItem="h1Y-DS-lSi" secondAttribute="leading" constant="16" id="bSl-ZR-DVs"/>
+                                <constraint firstItem="1Ck-cg-sX0" firstAttribute="top" secondItem="fEd-6S-3No" secondAttribute="bottom" constant="16" id="byI-Ll-uLd"/>
+                                <constraint firstItem="fEd-6S-3No" firstAttribute="top" secondItem="h1Y-DS-lSi" secondAttribute="topMargin" id="pSy-Xq-RwX"/>
+                                <constraint firstAttribute="trailing" secondItem="1Ck-cg-sX0" secondAttribute="trailing" constant="16" id="xsD-UN-BFG"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="h1Y-DS-lSi" firstAttribute="height" secondItem="We7-18-cMr" secondAttribute="height" priority="750" id="3Z9-AI-IqL"/>
+                        <constraint firstItem="h1Y-DS-lSi" firstAttribute="leading" secondItem="We7-18-cMr" secondAttribute="leading" id="4oh-IA-7Gp"/>
+                        <constraint firstAttribute="bottom" secondItem="h1Y-DS-lSi" secondAttribute="bottom" id="Siy-vv-Rrm"/>
+                        <constraint firstItem="h1Y-DS-lSi" firstAttribute="width" secondItem="We7-18-cMr" secondAttribute="width" id="YgQ-2U-DvH"/>
+                        <constraint firstAttribute="trailing" secondItem="h1Y-DS-lSi" secondAttribute="trailing" id="lWC-jZ-NP2"/>
+                        <constraint firstItem="h1Y-DS-lSi" firstAttribute="top" secondItem="We7-18-cMr" secondAttribute="top" id="ucy-Jl-5xV"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="HqB-O4-lE1"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <point key="canvasLocation" x="30" y="110"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="We7-18-cMr" secondAttribute="bottom" id="QhV-DV-Bwm"/>
+                <constraint firstItem="We7-18-cMr" firstAttribute="leading" secondItem="HqB-O4-lE1" secondAttribute="leading" id="mPY-Z1-0Q9"/>
+                <constraint firstItem="We7-18-cMr" firstAttribute="top" secondItem="cnn-WH-z0c" secondAttribute="top" id="puJ-w4-VGu"/>
+                <constraint firstItem="We7-18-cMr" firstAttribute="trailing" secondItem="HqB-O4-lE1" secondAttribute="trailing" id="sN2-VS-Uqn"/>
+            </constraints>
+            <point key="canvasLocation" x="150.72463768115944" y="-134.59821428571428"/>
         </view>
     </objects>
+    <designables>
+        <designable name="fEd-6S-3No">
+            <size key="intrinsicContentSize" width="375" height="256"/>
+        </designable>
+    </designables>
     <resources>
+        <image name="Moonrise Kingdom" width="375" height="256"/>
+        <namedColor name="White">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

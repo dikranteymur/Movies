@@ -7,6 +7,15 @@
 
 import Foundation
 
-final class DetailScreenViewModel {
-    
+final class DetailScreenViewModel: DetailScreenViewModelProtocol {
+    weak var delegate: DetailScreenViewModelDelegate?
+    var model: [String] = []
+
+    func load() {
+        notify(.updateTitle("Detail Screen"))
+    }
+
+    private func notify(_ handleOutput: DetailScreenViewModeOutput) {
+        delegate?.handleOutput(handleOutput)
+    }
 }

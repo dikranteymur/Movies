@@ -10,6 +10,7 @@ import Foundation
 final class DetailScreenBuilder {
     static func make() -> DetailScreenViewController {
         let viewController = DetailScreenViewController(nibName: DetailScreenViewController.className, bundle: nil)
+        viewController.viewModel = DetailScreenViewModel()
         return viewController
     }
 }

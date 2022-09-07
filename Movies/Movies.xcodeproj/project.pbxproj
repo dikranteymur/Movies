@@ -14,6 +14,9 @@
 		1D37311328C7E23A00DFB86E /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1D37311128C7E23A00DFB86E /* SF-Pro-Text-Bold.otf */; };
 		1D37311628C7E4B700DFB86E /* Extension+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D37311528C7E4B700DFB86E /* Extension+UIColor.swift */; };
 		1D37311828C7EC8000DFB86E /* Extension+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D37311728C7EC8000DFB86E /* Extension+Date.swift */; };
+		1D37311B28C86B6600DFB86E /* CustomRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D37311A28C86B6600DFB86E /* CustomRateView.swift */; };
+		1D37311D28C86B7000DFB86E /* CustomRateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D37311C28C86B7000DFB86E /* CustomRateView.xib */; };
+		1D37311F28C86DE100DFB86E /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D37311E28C86DE100DFB86E /* CustomImageView.swift */; };
 		1D77124728C7D65800707C4B /* MoviesTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D77124628C7D65800707C4B /* MoviesTableViewAdapter.swift */; };
 		1D77124928C7D66700707C4B /* MoviesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D77124828C7D66700707C4B /* MoviesTableViewCell.swift */; };
 		1D77124B28C7D67200707C4B /* MoviesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D77124A28C7D67200707C4B /* MoviesTableViewCell.xib */; };
@@ -36,6 +39,7 @@
 		1DCC37FC28C7AAF600010530 /* DetailScreenBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCC37FB28C7AAF600010530 /* DetailScreenBuilder.swift */; };
 		1DCC37FE28C7AAFE00010530 /* DetailScreenContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCC37FD28C7AAFE00010530 /* DetailScreenContracts.swift */; };
 		1DCC380028C7AB0800010530 /* DetailScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DCC37FF28C7AB0800010530 /* DetailScreenViewController.xib */; };
+		1DDDE54628C8C20F00ED17D3 /* Extension+CAGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDDE54528C8C20F00ED17D3 /* Extension+CAGradientLayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +50,9 @@
 		1D37311128C7E23A00DFB86E /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
 		1D37311528C7E4B700DFB86E /* Extension+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIColor.swift"; sourceTree = "<group>"; };
 		1D37311728C7EC8000DFB86E /* Extension+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Date.swift"; sourceTree = "<group>"; };
+		1D37311A28C86B6600DFB86E /* CustomRateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRateView.swift; sourceTree = "<group>"; };
+		1D37311C28C86B7000DFB86E /* CustomRateView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomRateView.xib; sourceTree = "<group>"; };
+		1D37311E28C86DE100DFB86E /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		1D77124628C7D65800707C4B /* MoviesTableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableViewAdapter.swift; sourceTree = "<group>"; };
 		1D77124828C7D66700707C4B /* MoviesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableViewCell.swift; sourceTree = "<group>"; };
 		1D77124A28C7D67200707C4B /* MoviesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviesTableViewCell.xib; sourceTree = "<group>"; };
@@ -70,6 +77,7 @@
 		1DCC37FB28C7AAF600010530 /* DetailScreenBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreenBuilder.swift; sourceTree = "<group>"; };
 		1DCC37FD28C7AAFE00010530 /* DetailScreenContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreenContracts.swift; sourceTree = "<group>"; };
 		1DCC37FF28C7AB0800010530 /* DetailScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailScreenViewController.xib; sourceTree = "<group>"; };
+		1DDDE54528C8C20F00ED17D3 /* Extension+CAGradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+CAGradientLayer.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,9 +110,20 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		1D37311928C864F600DFB86E /* CustomRateView */ = {
+			isa = PBXGroup;
+			children = (
+				1D37311A28C86B6600DFB86E /* CustomRateView.swift */,
+				1D37311C28C86B7000DFB86E /* CustomRateView.xib */,
+			);
+			path = CustomRateView;
+			sourceTree = "<group>";
+		};
 		1D77124428C7D22200707C4B /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				1DDDE54728C8C2A200ED17D3 /* CustomImageView */,
+				1D37311928C864F600DFB86E /* CustomRateView */,
 				1D77124528C7D62D00707C4B /* MoviesTableView */,
 			);
 			path = CustomViews;
@@ -174,6 +193,7 @@
 				1D77124C28C7D6B900707C4B /* Extension+UITableViewCell.swift */,
 				1D77124E28C7D9BE00707C4B /* Extension+UIFont.swift */,
 				1D37311528C7E4B700DFB86E /* Extension+UIColor.swift */,
+				1DDDE54528C8C20F00ED17D3 /* Extension+CAGradientLayer.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -229,8 +249,8 @@
 			children = (
 				1DCC37F728C7AAE200010530 /* DetailScreenViewController.swift */,
 				1DCC37F928C7AAED00010530 /* DetailScreenViewModel.swift */,
-				1DCC37FB28C7AAF600010530 /* DetailScreenBuilder.swift */,
 				1DCC37FD28C7AAFE00010530 /* DetailScreenContracts.swift */,
+				1DCC37FB28C7AAF600010530 /* DetailScreenBuilder.swift */,
 				1DCC37FF28C7AB0800010530 /* DetailScreenViewController.xib */,
 			);
 			path = DetailScreen;
@@ -254,6 +274,14 @@
 				1DCC37F328C7A9FD00010530 /* BaseScreenViewController.swift */,
 			);
 			path = BaseScreen;
+			sourceTree = "<group>";
+		};
+		1DDDE54728C8C2A200ED17D3 /* CustomImageView */ = {
+			isa = PBXGroup;
+			children = (
+				1D37311E28C86DE100DFB86E /* CustomImageView.swift */,
+			);
+			path = CustomImageView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,6 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DCC37CF28C7705C00010530 /* LaunchScreen.storyboard in Resources */,
+				1D37311D28C86B7000DFB86E /* CustomRateView.xib in Resources */,
 				1D77124B28C7D67200707C4B /* MoviesTableViewCell.xib in Resources */,
 				1D37310C28C7E16300DFB86E /* Images.xcassets in Resources */,
 				1DCC380028C7AB0800010530 /* DetailScreenViewController.xib in Resources */,
@@ -337,11 +366,14 @@
 				1DCC37E928C7A95500010530 /* MainScreenViewController.swift in Sources */,
 				1DCC37F628C7AA6200010530 /* Extension+NSObject.swift in Sources */,
 				1DCC37E028C7A80F00010530 /* AppRouter.swift in Sources */,
+				1D37311F28C86DE100DFB86E /* CustomImageView.swift in Sources */,
+				1DDDE54628C8C20F00ED17D3 /* Extension+CAGradientLayer.swift in Sources */,
 				1D77124728C7D65800707C4B /* MoviesTableViewAdapter.swift in Sources */,
 				1D77124F28C7D9BE00707C4B /* Extension+UIFont.swift in Sources */,
 				1DCC37E428C7A8AA00010530 /* AppService.swift in Sources */,
 				1D77124D28C7D6B900707C4B /* Extension+UITableViewCell.swift in Sources */,
 				1DCC37FE28C7AAFE00010530 /* DetailScreenContracts.swift in Sources */,
+				1D37311B28C86B6600DFB86E /* CustomRateView.swift in Sources */,
 				1DCC37C328C7705A00010530 /* AppDelegate.swift in Sources */,
 				1DCC37FA28C7AAED00010530 /* DetailScreenViewModel.swift in Sources */,
 				1DCC37F428C7A9FD00010530 /* BaseScreenViewController.swift in Sources */,
