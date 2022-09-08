@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 final class MoviesTableViewCell: UITableViewCell {
 
@@ -33,7 +34,30 @@ final class MoviesTableViewCell: UITableViewCell {
         dateLabel.textColor = .tmTextGray
     }
 
-    func setCell() {
-        
+    func setCell(model: MovieResult) {
+        if let path = model.backdrop_path {
+            let urlString = app.service.imageBaseUrl + path
+            let url = URL(string: urlString)
+            movieImageView.sd_setImage(with: url)
+        }
+
+        if let title = model.title {
+            if let year = model.release_date?.split(separator: "-").first {
+                let formattedTitle = title + "(\(year))"
+                titleLabel.text = formattedTitle
+            } else {
+                titleLabel.text = title
+            }
+        }
+
+        if let overview = model.overview {
+            descriptionLabel.text = overview
+        }
+
+        if let releaseDate = model.release_date {
+            dateLabel.text = releaseDate.toDateFormat
+        }
+
+
     }
 }

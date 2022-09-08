@@ -21,9 +21,9 @@ final class DetailScreenViewController: BaseScreenViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.isHidden = false
         viewModel?.load()
-        viewModel?.load()
-
+        viewModel?.showDetail()
         setupUI()
     }
 
@@ -43,6 +43,25 @@ extension DetailScreenViewController: DetailScreenViewModelDelegate {
             navigationItem.title = title
         case .setLoading(let isLoading):
             print(isLoading)
+        case .showDetail(model: let movieDetail):
+            if let path = movieDetail.backdrop_path {
+                let urlString = app.service.imageBaseUrl + path
+                movieCustomImageView.sd_setImage(with: URL(string: urlString))
+                
+            }
+
+            customRateView.setRateLabel(value: movieDetail.vote_average ?? 0.0)
+            customRateView.setDateLabel(value: movieDetail.release_date ?? "")
+
+            descriptionLabel.text = movieDetail.overview ?? ""
+
+            guard let title = movieDetail.title else { return }
+            if let year = movieDetail.release_date?.split(separator: "-").first {
+                let formattedTitle = title + "(\(year))"
+                titleLabel.text = formattedTitle
+            } else {
+                titleLabel.text = title
+            }
         }
     }
 

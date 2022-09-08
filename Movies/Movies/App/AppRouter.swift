@@ -20,10 +20,10 @@ final class AppRouter {
         window.makeKeyAndVisible()
     }
 
-    func detailView() {
-        let viewController = DetailScreenBuilder.make()
-        let nav = UINavigationController(rootViewController: viewController)
-        window.rootViewController = nav
-        window.makeKeyAndVisible()
-    }
+//    func detailView() {
+//        let viewController = DetailScreenBuilder.make()
+//        let nav = UINavigationController(rootViewController: viewController)
+//        window.rootViewController = nav
+//        window.makeKeyAndVisible()
+//    }
 }

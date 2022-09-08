@@ -10,7 +10,7 @@ import UIKit
 final class MainScreenBuilder {
     static func make() -> UINavigationController {
         let viewController = MainScreenViewController(nibName: MainScreenViewController.className, bundle: nil)
-        viewController.viewModel = MainScreenViewModel()
+        viewController.viewModel = MainScreenViewModel(service: app.service)
         let navigationController = UINavigationController(rootViewController: viewController)
         return navigationController
     }

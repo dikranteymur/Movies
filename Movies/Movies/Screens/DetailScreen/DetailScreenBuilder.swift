@@ -8,9 +8,9 @@
 import Foundation
 
 final class DetailScreenBuilder {
-    static func make() -> DetailScreenViewController {
+    static func make(viewModel: DetailScreenViewModelProtocol) -> DetailScreenViewController {
         let viewController = DetailScreenViewController(nibName: DetailScreenViewController.className, bundle: nil)
-        viewController.viewModel = DetailScreenViewModel()
+        viewController.viewModel = viewModel
         return viewController
     }
 }

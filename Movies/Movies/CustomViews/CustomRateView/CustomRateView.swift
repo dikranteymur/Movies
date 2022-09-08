@@ -35,4 +35,19 @@ final class CustomRateView: UIView {
         dateLabel.font = .medium13
         dateLabel.textColor = .tmTextBlack
     }
+
+    func setRateLabel(value: Double) {
+        rateAttLabel.font = .medium13
+        rateAttLabel.textColor = .tmDarkGray
+        let text = value.setFormatted(fractionDigit: 1) + "/10"
+        let attributedString = NSMutableAttributedString(string: text)
+        let range = NSRange(location: 0, length: 3)
+        attributedString.addAttributes([NSAttributedString.Key.foregroundColor : UIColor.tmTextBlack], range: range)
+        rateAttLabel.attributedText = attributedString
+    }
+
+    func setDateLabel(value: String) {
+        let formattedDate = value.toDateFormat
+        dateLabel.text = formattedDate
+    }
 }
